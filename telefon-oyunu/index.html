@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Telefonu Geri Al</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Sesler -->
+<audio id="move-sound" src="sounds/move.mp3"></audio>
+<audio id="click-sound" src="sounds/click.mp3"></audio>
+<audio id="success-sound" src="sounds/success.mp3"></audio>
+<audio id="fail-sound" src="sounds/fail.mp3"></audio>
+
+<!-- Ana Oyun Sahnesi -->
+<div id="game" class="scene">
+  <img src="img/anne.png" alt="Anne" class="character">
+  <p>Anne: “Yeter artık! Telefonunu alıyorum!”</p>
+  <p>Karakter: “Hayır yaa!”</p>
+  <button onclick="startStreet()">Sokağa Çık</button>
+</div>
+
+<!-- Sokak Sahnesi -->
+<div id="street" class="scene">
+  <h1>Sokak</h1>
+  <div id="game-area">
+    <img id="player" src="img/karakter.png" alt="Karakter">
+    <div id="trash-container"></div>
+  </div>
+  <div id="money">Paran: 0 TL</div>
+  <div id="timer">Süre: 30</div>
+</div>
+
+<!-- Bina Sahnesi -->
+<div id="building" class="scene">
+  <img src="img/sisman.png" alt="Şişman Karakter" class="character">
+  <h1>Bina</h1>
+  <p>Şişman Karakter: “Telefon istiyorsan 20 TL ver.”</p>
+  <button onclick="giveMoney()">20 TL Ver</button>
+</div>
+
+<!-- Kazanma Sahnesi -->
+<div id="win" class="scene">
+  <img src="img/telefon.png" alt="Telefon" class="character">
+  <h1>Tebrikler!</h1>
+  <p>Telefonunu geri aldın 🎉</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
